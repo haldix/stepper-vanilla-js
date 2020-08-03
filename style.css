@@ -93,13 +93,10 @@ body {
           justify-content: space-between;
 }
 
-.steps-cont {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .horiz .steps-cont {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   margin-bottom: 1rem;
 }
 
@@ -110,10 +107,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
   margin: 0;
+}
+
+.vert .steps-cont {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .spacer {
@@ -127,6 +127,7 @@ body {
 .spacer.sp-horiz {
   height: 2px;
   min-width: 6rem;
+  margin-top: 1.5rem;
 }
 
 .spacer.sp-vert {

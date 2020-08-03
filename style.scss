@@ -65,11 +65,8 @@ body {
   justify-content: space-between;
 }
 
-.steps-cont {
-  align-items: center;
-}
-
 .horiz .steps-cont {
+  align-items: start;
   margin-bottom: 1rem;
 }
 
@@ -77,8 +74,12 @@ body {
 .vert .descriptions-cont {
   border: 2px solid orange;
   flex-direction: column;
-  align-items: space-between;
+  //align-items: space-between;
   margin: 0;
+}
+
+.vert .steps-cont {
+  align-items: center;
 }
 
 .spacer {
@@ -90,6 +91,7 @@ body {
 .spacer.sp-horiz {
   height: 2px;
   min-width: 6rem;
+  margin-top: 1.5rem;
 }
 
 .spacer.sp-vert {
