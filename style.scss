@@ -1,0 +1,99 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  @include flex-center;
+  flex-direction: column;
+}
+
+.container {
+  background-color: #f1f1f1;
+  padding: 1.5rem;
+  border: 1px solid gray;
+  margin: 2rem;
+}
+
+.container.horiz {
+  display: inline-block;
+}
+
+.container.vert {
+  display: flex;
+}
+
+.step {
+  width: 13ch;
+
+  &__number {
+    @include flex-center;
+    height: 3rem;
+    width: 3rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid grey;
+    background-color: tomato;
+    color: #333;
+  }
+
+  &__description {
+    border: 1px solid #000;
+    width: 13ch;
+    height: 3rem;
+    text-align: center;
+  }
+}
+
+.vert .step__description {
+  @include flex-center;
+}
+
+.steps-cont,
+.descriptions-cont {
+  border: 1px solid pink;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.steps-cont {
+  align-items: center;
+}
+
+.horiz .steps-cont {
+  margin-bottom: 1rem;
+}
+
+.vert .steps-cont,
+.vert .descriptions-cont {
+  border: 2px solid orange;
+  flex-direction: column;
+  align-items: space-between;
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+  margin: 0 -1rem;
+  background-color: #555;
+}
+
+.spacer.sp-horiz {
+  height: 2px;
+  min-width: 6rem;
+}
+
+.spacer.sp-vert {
+  min-height: 4rem;
+  width: 2px;
+  margin: 0.8rem 0;
+}

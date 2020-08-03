@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  background-color: #f1f1f1;
+  padding: 1.5rem;
+  border: 1px solid gray;
+  margin: 2rem;
+}
+
+.container.horiz {
+  display: inline-block;
+}
+
+.container.vert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.step {
+  width: 13ch;
+}
+
+.step__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid grey;
+  background-color: tomato;
+  color: #333;
+}
+
+.step__description {
+  border: 1px solid #000;
+  width: 13ch;
+  height: 3rem;
+  text-align: center;
+}
+
+.vert .step__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.steps-cont,
+.descriptions-cont {
+  border: 1px solid pink;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.steps-cont {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.horiz .steps-cont {
+  margin-bottom: 1rem;
+}
+
+.vert .steps-cont,
+.vert .descriptions-cont {
+  border: 2px solid orange;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  margin: 0;
+}
+
+.spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 -1rem;
+  background-color: #555;
+}
+
+.spacer.sp-horiz {
+  height: 2px;
+  min-width: 6rem;
+}
+
+.spacer.sp-vert {
+  min-height: 4rem;
+  width: 2px;
+  margin: 0.8rem 0;
+}
+/*# sourceMappingURL=style.css.map */
