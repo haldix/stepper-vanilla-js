@@ -14,10 +14,23 @@ $step-size: 3rem;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 0.4rem;
   margin: 2rem;
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.horiz .step-cont {
+  display: flex;
+}
+
+.container.horiz {
+  justify-content: space-between;
+}
+
+.container.vert {
+  flex-direction: column;
 }
 
 .step {
-  border: green dashed 1px;
   width: 13ch;
 
   &__number {
@@ -58,21 +71,6 @@ $step-size: 3rem;
 
 .vert .step__description {
   @include flex-center;
-}
-
-.steps-cont {
-  border: solid 1px blue;
-  display: flex;
-}
-
-.horiz .steps-cont {
-  align-items: start;
-  justify-content: space-between;
-}
-
-.vert .steps-cont {
-  flex-direction: column;
-  align-items: start;
 }
 
 .spacer {
