@@ -1,55 +1,58 @@
+$step-size: 3rem;
+
 @mixin flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  @include flex-center;
-  flex-direction: column;
-}
-
 .container {
+  display: inline-block;
   background-color: #f1f1f1;
   padding: 1.5rem;
   border: 1px solid gray;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 0.4rem;
   margin: 2rem;
 }
 
-.container.horiz {
-  display: inline-block;
-}
-
-.container.vert {
-  display: flex;
-}
-
 .step {
+  border: green dashed 1px;
   width: 13ch;
 
   &__number {
     @include flex-center;
-    height: 3rem;
-    width: 3rem;
-    margin: 0 auto;
+    height: $step-size;
+    width: $step-size;
+    margin: 0 auto 1rem;
     border-radius: 50%;
-    border: 1px solid grey;
-    background-color: tomato;
+    border: 1px solid #838383;
     color: #333;
+
+    &-selected {
+      background: slateblue;
+      border: 1px solid #bdbdbd;
+      color: #fff;
+    }
   }
 
   &__description {
-    border: 1px solid #000;
     width: 13ch;
-    height: 3rem;
+    height: $step-size;
     text-align: center;
+
+    &-active {
+      font-weight: bold;
+    }
+  }
+}
+
+.vert .step {
+  width: auto;
+  display: flex;
+
+  &__number {
+    margin: 0 0.5rem 0 0;
   }
 }
 
@@ -57,45 +60,34 @@ body {
   @include flex-center;
 }
 
-.steps-cont,
-.descriptions-cont {
-  border: 1px solid pink;
-  width: 100%;
+.steps-cont {
+  border: solid 1px blue;
   display: flex;
-  justify-content: space-between;
 }
 
 .horiz .steps-cont {
   align-items: start;
-  margin-bottom: 1rem;
-}
-
-.vert .steps-cont,
-.vert .descriptions-cont {
-  border: 2px solid orange;
-  flex-direction: column;
-  //align-items: space-between;
-  margin: 0;
+  justify-content: space-between;
 }
 
 .vert .steps-cont {
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
 }
 
 .spacer {
   flex: 1;
-  margin: 0 -1rem;
   background-color: #555;
 }
 
 .spacer.sp-horiz {
+  margin: $step-size/2 -1rem 0;
   height: 2px;
-  min-width: 6rem;
-  margin-top: 1.5rem;
+  min-width: $step-size * 2;
 }
 
 .spacer.sp-vert {
-  min-height: 4rem;
+  min-height: $step-size * 1.2;
   width: 2px;
-  margin: 0.8rem 0;
+  margin: 0.8rem 0 0.8rem $step-size/2;
 }
