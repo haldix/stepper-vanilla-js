@@ -4,44 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Stepper Flex</title>
+    <title>Stepper Vanilla JS</title>
+    <script defer src="scripts.js"></script>
   </head>
   <body>
+    <div class="main-cont">
+    <h1>Stepper in Vanilla JS</h1>
     <ol class="container horiz" role="group" aria-label="progress">
-      <li class="step-cont">
-        <span class="sr-only">completed</span>
-        <div class="step">
-          <div class="step__number step__number-selected">
-            <span>&#10003;</span>
-          </div>
-          <div class="step__description">Add Personal Info</div>
-        </div>
-        <div class="spacer sp-horiz"></div>
-      </li>
       <li class="step-cont">
         <span class="sr-only">current</span>
         <div class="step">
-          <div class="step__number step__number-selected">2</div>
-          <div class="step__description step__description-active">
+          <div class="step__number step__number-selected">
+            <span class="step__number-val">1</span>
+          </div>
+          <div class="step__description step__description-active"">Add Personal Info</div>
+        </div>
+        <div class="spacer sp-horiz"></div>
+      </li>
+
+      <li class="step-cont">
+        <span class="sr-only"></span>
+        <div class="step">
+          <div class="step__number">
+            <span class="step__number-val">2</span>
+          </div>
+          <div class="step__description" >
             Add Payment Details
           </div>
         </div>
         <div class="spacer sp-horiz"></div>
       </li>
+
       <li class="step-cont">
+        <span class="sr-only"></span>
         <div class="step">
-          <div class="step__number step__number-disabled">3</div>
+          <div class="step__number">
+            <span class="step__number-val">3</span>
+          </div>
           <div class="step__description">Complete Registration</div>
         </div>
         <div class="spacer sp-horiz"></div>
       </li>
+
       <li class="step-cont">
+        <span class="sr-only"></span>
         <div class="step">
-          <div class="step__number">4</div>
+          <div class="step__number">
+            <span class="step__number-val">4</span>
+          </div>
           <div class="step__description">Login</div>
         </div>
       </li>
     </ol>
+    <div class="buttons-cont">
+      <button id='btn-inc' class="btn-step">+</button>
+      <button id='btn-dec' class="btn-step">-</button>
+    </div>
 
     <ol class="container vert">
       <li class="step-cont">
@@ -74,5 +92,6 @@
         </div>
       </li>
     </ol>
+  </div>
   </body>
 </html>

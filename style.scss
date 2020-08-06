@@ -6,6 +6,23 @@ $step-size: 3rem;
   justify-content: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial, Arial, Helvetica, sans-serif;
+}
+
+.main-cont {
+  max-width: 1000px;
+  margin: 2rem auto;
+  @include flex-center;
+  flex-direction: column;
+}
+
 .sr-only {
   position: absolute;
   left: -10000px;
@@ -98,4 +115,21 @@ $step-size: 3rem;
   min-height: $step-size * 1.2;
   width: 2px;
   margin: 0.8rem 0 0.8rem $step-size/2;
+}
+
+// buttons (not part of stepper)
+.btn-step {
+  display: inline-block;
+  width: 2.3em;
+  padding-top: 0.3em;
+  color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  background-color: tomato;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.btn-step:hover {
+  background-color: rgb(188, 69, 48);
 }
